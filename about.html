@@ -7,60 +7,41 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        .transformation-highlight {
-            margin: 3rem 0;
-            text-align: center;
-        }
-        .transformation-highlight img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 10px 30px rgba(66, 227, 245, 0.15);
-        }
-        
-        .physique-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 3rem 0;
-        }
-        .physique-grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #333;
-            /* Applies the cohesive "gritty" gym lighting filter to all photos */
-            filter: contrast(1.15) saturate(0.85); 
-            transition: all 0.3s ease;
-        }
-        .physique-grid img:hover {
-            border-color: var(--accent-color);
-            transform: scale(1.02);
-            filter: contrast(1.1) saturate(1);
-        }
+        /* Container Layouts */
+        .transformation-highlight { margin: 3rem 0; text-align: center; }
+        .physique-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 3rem 0; }
+        .coaching-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 2rem 0 3rem 0; }
 
-        .coaching-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 2rem 0 3rem 0;
-        }
+        /* Shared Image Styling for All Sections */
+        .transformation-highlight img, 
+        .physique-grid img, 
         .coaching-grid img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
             border-radius: 8px;
-            border: 1px solid #333;
-            filter: contrast(1.1) saturate(0.9);
+            border: 2px solid #222;
+            object-fit: cover;
+            filter: contrast(1.1) saturate(0.85); /* Cohesive gritty look */
+            transition: all 0.3s ease-in-out;
+            cursor: pointer; /* Tells the user "look at this" */
+        }
+
+        /* Specific heights for grids to keep them tidy */
+        .coaching-grid img { height: 300px; }
+        .transformation-highlight img { max-width: 100%; height: auto; border-width: 3px; }
+
+        /* --- THE UNIFIED HOVER EFFECT --- */
+        .transformation-highlight img:hover, 
+        .physique-grid img:hover, 
+        .coaching-grid img:hover {
+            border-color: var(--accent-color);
+            transform: scale(1.02); /* Subtle pop forward */
+            filter: contrast(1.1) saturate(1); /* Returns to full color on hover */
+            box-shadow: 0 0 20px rgba(66, 227, 245, 0.3); /* The Cyan Glow */
         }
 
         /* Mobile Adjustments */
         @media (max-width: 600px) {
-            .physique-grid {
-                grid-template-columns: 1fr; /* Stacks the 4 photos on top of each other on mobile */
-            }
+            .physique-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
