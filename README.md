@@ -1,2 +1,2 @@
-# rebuilding-quality-physiques
-Official website for Rebuilding Quality Physiques coaching
+# TYFITNESS
+Official website for TYFITNESS coaching
