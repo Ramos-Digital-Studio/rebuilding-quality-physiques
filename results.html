@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transformations | TYFITNESS</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .category-section {
+            margin-bottom: 5rem;
+            padding: 2rem 0;
+        }
+        .category-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+        }
+        .photo-grid img {
+            width: 100%;
+            aspect-ratio: 4/5; /* Keeps all photos uniform */
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #222;
+            transition: transform 0.3s ease;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.02);
+            border-color: #00ffff; /* Matches your cyan accent */
+        }
+        .hero-photo {
+            width: 100%;
+            max-width: 500px; /* Highlights Ty's photo specifically */
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #00ffff;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,36 +67,66 @@
 
     <section id="transformations" class="gallery-section" style="padding-top: 4rem;">
         
-        <div class="section-header" style="margin-bottom: 4rem;">
+        <div class="section-header" style="margin-bottom: 3rem;">
             <h2>CLIENT TRANSFORMATIONS</h2>
-            <p style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">Real People. Real Effort. Science-Backed Results.</p>
+            <p style="color: var(--accent-color, #00ffff); font-weight: bold; font-size: 1.2rem;">Real People. Real Effort. Science-Backed Results.</p>
         </div>
 
-        <div class="roadmap-grid"> 
-            
-            <div class="step-card">
-                <img src="fatloss.jpg" alt="Fat Loss Transformation" style="width: 100%; height: auto; max-height: 450px; object-fit: contain; background-color: #000; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid #222;">
-                <h3 class="highlight">Fat Loss</h3>
-                <p>I help people lose fat the right way! It's more than just "weight loss." I focus on getting you lean while maintaining quality muscle tissue. This gives you that chiseled look rather than "sucked up." This is supported through a tapered nutritional guidance program with a controlled calorie deficit and mild cardio!</p>
+        <div class="category-section">
+            <div class="category-header">
+                <h3 class="highlight" style="font-size: 2rem; margin-bottom: 0.5rem;">Lead By Example</h3>
+                <p>I don't just coach it—I live it. My personal 12-week protocol.</p>
             </div>
-            
-            <div class="step-card">
-                <img src="musclegain.jpg" alt="Muscle Gain Transformation" style="width: 100%; height: auto; max-height: 450px; object-fit: contain; background-color: #000; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid #222;">
-                <h3 class="highlight">Muscle Gain</h3>
-                <p>Are you looking to fill out those T-Shirts, boost your strength, or just look like a force to be reckoned with? I can help you do all three in a short period of time. Most importantly, we will minimize the fat gain that often comes with putting on muscle so you can enjoy what you earn!</p>
-            </div>
-            
-            <div class="step-card">
-                <img src="resilience.jpg" alt="Resilience Transformation" style="width: 100%; height: auto; max-height: 450px; object-fit: contain; background-color: #000; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid #222;">
-                <h3 class="highlight">Resilience And Well Being!</h3>
-                <p>Boost your confidence and wellness with simple lifestyle changes!</p>
-            </div>
+            <img src="ty-transformation.jpg" alt="Coach Ty Transformation" class="hero-photo">
+        </div>
 
+        <hr style="border: 1px solid #222; margin-bottom: 4rem;">
+
+        <div class="category-section">
+            <div class="category-header">
+                <h3 class="highlight" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Fat Loss</h3>
+                <p>I focus on getting you lean while maintaining quality muscle tissue. This gives you that chiseled look rather than "sucked up," supported through a tapered nutritional program.</p>
+            </div>
+            <div class="photo-grid">
+                <img src="fatloss-1.jpg" alt="Fat Loss Result">
+                <img src="fatloss-2.jpg" alt="Fat Loss Result">
+                <img src="fatloss-3.jpg" alt="Fat Loss Result">
+                <img src="fatloss-4.jpg" alt="Fat Loss Result">
+                <img src="fatloss-5.jpg" alt="Fat Loss Result">
+                <img src="fatloss-6.jpg" alt="Fat Loss Result">
+                <img src="fatloss-7.jpg" alt="Fat Loss Result">
+                <img src="fatloss-8.jpg" alt="Fat Loss Result">
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-header">
+                <h3 class="highlight" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Muscle Gain</h3>
+                <p>Fill out those T-shirts, boost your strength, and look like a force to be reckoned with. We minimize fat gain while putting on quality tissue.</p>
+            </div>
+            <div class="photo-grid">
+                <img src="muscle-1.jpg" alt="Muscle Gain Result">
+                <img src="muscle-2.jpg" alt="Muscle Gain Result">
+                <img src="muscle-3.jpg" alt="Muscle Gain Result">
+                <img src="muscle-4.jpg" alt="Muscle Gain Result">
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-header">
+                <h3 class="highlight" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Resilience & Well Being</h3>
+                <p>Boost your confidence and wellness with sustainable lifestyle changes.</p>
+            </div>
+            <div class="photo-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <img src="resilience-1.jpg" alt="Lifestyle Change">
+                <img src="resilience-2.jpg" alt="Lifestyle Change">
+            </div>
         </div>
         
         <div style="text-align: center; margin-top: 3rem;">
             <a href="contact.html" class="cta-button">Start Your Transformation Today</a>
         </div>
+
     </section>
 
     <footer>
