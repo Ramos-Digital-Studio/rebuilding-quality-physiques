@@ -18,6 +18,27 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        /* New styling for the two Coach photos */
+        .coach-grid {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap; /* Stacks on small screens */
+        }
+        .coach-grid img {
+            width: 100%;
+            max-width: 450px; 
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #00ffff; /* Keeps the cyan highlight for the coach */
+            transition: transform 0.3s ease;
+        }
+        .coach-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Styling for the client grids */
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -34,16 +55,7 @@
         }
         .photo-grid img:hover {
             transform: scale(1.02);
-            border-color: #00ffff; /* Matches your cyan accent */
-        }
-        .hero-photo {
-            width: 100%;
-            max-width: 500px; /* Highlights Ty's photo specifically */
-            height: auto;
-            border-radius: 8px;
-            border: 3px solid #00ffff;
-            margin: 0 auto;
-            display: block;
+            border-color: #00ffff; /* Cyan hover effect */
         }
     </style>
 </head>
@@ -75,9 +87,12 @@
         <div class="category-section">
             <div class="category-header">
                 <h3 class="highlight" style="font-size: 2rem; margin-bottom: 0.5rem;">Lead By Example</h3>
-                <p>I don't just coach it—I live it. My personal 12-week protocol.</p>
+                <p>I don't just coach it—I live it. Consistency and effort over time.</p>
             </div>
-            <img src="ty-transformation.jpg" alt="Coach Ty Transformation" class="hero-photo">
+            <div class="coach-grid">
+                <img src="ty-1.jpg" alt="Coach Ty Transformation 1">
+                <img src="ty-2.jpg" alt="Coach Ty Transformation 2">
+            </div>
         </div>
 
         <hr style="border: 1px solid #222; margin-bottom: 4rem;">
@@ -96,6 +111,7 @@
                 <img src="fatloss-6.jpg" alt="Fat Loss Result">
                 <img src="fatloss-7.jpg" alt="Fat Loss Result">
                 <img src="fatloss-8.jpg" alt="Fat Loss Result">
+                <img src="fatloss-9.jpg" alt="Fat Loss Result">
             </div>
         </div>
 
@@ -109,6 +125,7 @@
                 <img src="muscle-2.jpg" alt="Muscle Gain Result">
                 <img src="muscle-3.jpg" alt="Muscle Gain Result">
                 <img src="muscle-4.jpg" alt="Muscle Gain Result">
+                <img src="muscle-5.jpg" alt="Muscle Gain Result">
             </div>
         </div>
 
@@ -120,6 +137,7 @@
             <div class="photo-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
                 <img src="resilience-1.jpg" alt="Lifestyle Change">
                 <img src="resilience-2.jpg" alt="Lifestyle Change">
+                <img src="resilience-3.jpg" alt="Lifestyle Change">
             </div>
         </div>
         
