@@ -65,6 +65,12 @@
                 max-width: 900px; /* Keeps the 2x2 grid from stretching too wide */
                 margin: 0 auto;   /* Centers the grid on the page */
             }
+            /* Centers the odd item on the bottom row if there are 3 images */
+            .photo-grid.two-across img:last-child:nth-child(odd) {
+                grid-column: span 2;
+                max-width: calc(50% - 0.75rem);
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -146,7 +152,6 @@
                 <img src="resilience-1.jpg" alt="Lifestyle Change">
                 <img src="resilience-2.jpg" alt="Lifestyle Change">
                 <img src="resilience-3.jpg" alt="Lifestyle Change">
-                <img src="resilience-4.jpg" alt="Lifestyle Change">
             </div>
         </div>
         
