@@ -19,7 +19,7 @@
             margin-right: auto;
         }
         
-        /* New styling for the two Coach photos */
+        /* Styling for the two Coach photos */
         .coach-grid {
             display: flex;
             gap: 1.5rem;
@@ -38,7 +38,7 @@
             transform: scale(1.02);
         }
 
-        /* Styling for the client grids */
+        /* Default styling for the client grids (Fat Loss) */
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -56,6 +56,15 @@
         .photo-grid img:hover {
             transform: scale(1.02);
             border-color: #00ffff; /* Cyan hover effect */
+        }
+
+        /* New modifier to force 2 columns on Desktop for Muscle/Resilience */
+        @media (min-width: 768px) {
+            .photo-grid.two-across {
+                grid-template-columns: 1fr 1fr;
+                max-width: 900px; /* Keeps the 2x2 grid from stretching too wide */
+                margin: 0 auto;   /* Centers the grid on the page */
+            }
         }
     </style>
 </head>
@@ -120,7 +129,7 @@
                 <h3 class="highlight" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Muscle Gain</h3>
                 <p>Fill out those T-shirts, boost your strength, and look like a force to be reckoned with. We minimize fat gain while putting on quality tissue.</p>
             </div>
-            <div class="photo-grid">
+            <div class="photo-grid two-across">
                 <img src="muscle-1.jpg" alt="Muscle Gain Result">
                 <img src="muscle-2.jpg" alt="Muscle Gain Result">
                 <img src="muscle-3.jpg" alt="Muscle Gain Result">
@@ -133,7 +142,7 @@
                 <h3 class="highlight" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Resilience & Well Being</h3>
                 <p>Boost your confidence and wellness with sustainable lifestyle changes.</p>
             </div>
-            <div class="photo-grid">
+            <div class="photo-grid two-across">
                 <img src="resilience-1.jpg" alt="Lifestyle Change">
                 <img src="resilience-2.jpg" alt="Lifestyle Change">
                 <img src="resilience-3.jpg" alt="Lifestyle Change">
