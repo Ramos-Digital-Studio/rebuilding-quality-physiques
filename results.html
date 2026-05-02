@@ -24,21 +24,24 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            flex-wrap: wrap; /* Stacks on small screens */
+            flex-wrap: wrap; 
         }
         .coach-grid img {
             width: 100%;
             max-width: 450px; 
             height: auto;
+            /* Ensures the entire coach photo fits without cropping */
+            object-fit: contain; 
+            background-color: #0a0a0a;
             border-radius: 8px;
-            border: 3px solid #00ffff; /* Keeps the cyan highlight for the coach */
+            border: 3px solid #00ffff; 
             transition: transform 0.3s ease;
         }
         .coach-grid img:hover {
             transform: scale(1.02);
         }
 
-        /* Default styling for the client grids (Fat Loss) */
+        /* Styling for the client grids */
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -47,8 +50,12 @@
         }
         .photo-grid img {
             width: 100%;
-            aspect-ratio: 4/5; /* Keeps all photos uniform */
-            object-fit: cover;
+            aspect-ratio: 4/5; /* Keeps the BOXES perfectly uniform */
+            
+            /* THIS IS THE FIX: */
+            object-fit: contain; /* Shows the WHOLE photo without cropping */
+            background-color: #0a0a0a; /* Fills empty space with a clean dark background */
+            
             border-radius: 8px;
             border: 2px solid #222;
             transition: transform 0.3s ease;
@@ -58,12 +65,12 @@
             border-color: #00ffff; /* Cyan hover effect */
         }
 
-        /* New modifier to force 2 columns on Desktop for Muscle/Resilience */
+        /* Modifier to force 2 columns on Desktop for Muscle/Resilience */
         @media (min-width: 768px) {
             .photo-grid.two-across {
                 grid-template-columns: 1fr 1fr;
-                max-width: 900px; /* Keeps the 2x2 grid from stretching too wide */
-                margin: 0 auto;   /* Centers the grid on the page */
+                max-width: 900px; 
+                margin: 0 auto;   
             }
             /* Centers the odd item on the bottom row if there are 3 images */
             .photo-grid.two-across img:last-child:nth-child(odd) {
